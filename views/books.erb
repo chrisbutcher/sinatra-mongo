@@ -1,0 +1,14 @@
+<html>
+<head>
+  <title>Books!</title>
+  <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+  <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<% @books.each do |book| %>
+  <div class="alert">
+    <h1><%= book['title'] %> by <%= book['author'] %></h1>
+  </div>
+<% end %>
+</body>
+</html>
