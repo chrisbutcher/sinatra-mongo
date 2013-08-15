@@ -33,3 +33,12 @@ get '/books/all' do
   @books = settings.mongo_db['books'].find({}, :sort => 'title')
   erb :books
 end
+
+get '/books/add' do
+  erb :add_book
+end
+
+post '/books/add' do
+  new_id = settings.mongo_db['books'].insert params
+  redirect '/books/all'
+end
